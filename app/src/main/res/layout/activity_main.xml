@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ATM Convert Calculator"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@id/yen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yen"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:text="Japanese Yen"
+        android:textColor="#040303"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/withdraw_text"
+        app:layout_constraintEnd_toStartOf="@id/user_yen"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Title" />
+
+    <TextView
+        android:id="@+id/ATM_Fee_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="ATM Convert Fee"
+        android:textColor="#070707"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/withdraw_text"
+        app:layout_constraintEnd_toEndOf="@id/yen"
+        app:layout_constraintStart_toStartOf="@id/yen"
+        app:layout_constraintTop_toBottomOf="@id/yen" />
+
+    <TextView
+        android:id="@+id/withdraw_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Withdraw Fee"
+        android:textColor="#070707"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/cost_text"
+        app:layout_constraintEnd_toEndOf="@id/yen"
+        app:layout_constraintStart_toStartOf="@id/yen"
+        app:layout_constraintTop_toBottomOf="@id/ATM_Fee_text" />
+
+    <TextView
+        android:id="@+id/cost_text"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Total in USD: "
+        android:textColor="#0E0D0D"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@id/withdraw_text"
+        app:layout_constraintStart_toStartOf="@id/withdraw_text"
+        app:layout_constraintTop_toBottomOf="@id/withdraw_text" />
+
+    <EditText
+        android:id="@+id/user_yen"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:hint="Max 100,000 yen"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/user_withdraw_fee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/yen"
+        app:layout_constraintTop_toBottomOf="@id/Title" />
+
+    <EditText
+        android:id="@+id/user_ATM_fee"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="ATM Fee(USD)"
+        android:inputType="text"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@id/user_yen"
+        app:layout_constraintEnd_toEndOf="@id/user_yen"
+        app:layout_constraintTop_toBottomOf="@id/user_yen"
+        app:layout_constraintBottom_toTopOf="@id/user_withdraw_fee"/>
+
+
+    <EditText
+        android:id="@+id/user_withdraw_fee"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:hint="Withdraw Fee(USD)"
+        android:inputType="text"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@id/user_ATM_fee"
+        app:layout_constraintEnd_toEndOf="@id/user_ATM_fee"
+        app:layout_constraintTop_toBottomOf="@id/user_ATM_fee"
+        app:layout_constraintBottom_toTopOf="@id/totalCostUSD"/>
+
+
+
+
+    <TextView
+        android:id="@+id/totalCostUSD"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Total: "
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@id/user_withdraw_fee"
+        app:layout_constraintStart_toStartOf="@id/user_withdraw_fee"
+        app:layout_constraintTop_toBottomOf="@id/user_withdraw_fee" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
