@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CodeMath-CurrencyConverter</string>
+    <string name="atm_withdrawal_calculator">ATM Withdrawal Calculator</string>
+    <string name="japanese_yen_jpy">Japanese Yen (JPY)</string>
+    <string name="atm_fee">ATM Fee</string>
+    <string name="withdrawal_fee">Withdrawal Fee</string>
+    <string name="usd">USD</string>
+    <string name="button_text">Calculate</string>
+    <string name="yen_limits">0-100,000</string>
+    <string name="total_usd">Total (USD):</string>
 </resources>
