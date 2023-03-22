@@ -8,4 +8,6 @@
     <string name="button_text">Calculate</string>
     <string name="yen_limits">100,000 max</string>
     <string name="total_usd">Total (USD):</string>
+    <string name="_110_jpy">110 JPY</string>
+    <string name="_220_jpy">220 JPY</string>
 </resources>
