@@ -20,7 +20,12 @@ class MainActivity : AppCompatActivity() {
             //Get user input
             val userYen = binding.userYen.text.toString().toDouble()
             val userWithdrawFee = binding.userWithdrawFee.text.toString().toDouble()
-            val userAtmFee = binding.userATMFee.text.toString().toDouble()
+
+            val userAtmFee: Double = when(binding.ATMFee.checkedRadioButtonId) {
+                R.id.radio_110 -> 110.00
+                R.id.radio_220 -> 220.00
+                else -> 110.00
+            }
 
             //Calculate total cost in USD
             val total = calculateCost(userYen, userAtmFee, userWithdrawFee)
