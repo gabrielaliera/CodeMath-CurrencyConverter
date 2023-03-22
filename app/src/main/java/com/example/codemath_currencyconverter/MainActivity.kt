@@ -7,9 +7,9 @@ import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
-    private val yenTOusd : Double = 132.44  // 132.44 yen to 1 USD
+    private val yenToUSD : Double = 132.44  // 132.44 yen to 1 USD
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             val userAtmFee = binding.userATMFee.text.toString().toDouble()
 
             //Calculate total cost in USD
-            val total = calculateCost(userYen, userAtmFee, userWithdrawFee, yenTOusd)
+            val total = calculateCost(userYen, userAtmFee, userWithdrawFee)
 
             //Format to currency $0.00
             val currencyTotal : String = NumberFormat.getCurrencyInstance().format(total)
@@ -33,9 +33,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    private fun calculateCost(yen: Double = 0.0, atmFee: Double= 10.0, withdrawFee: Double = 5.00, yenTOusd: Double) : Double {
-        val convertToUSD : Double = (yen + atmFee ) / yenTOusd
-        val total = convertToUSD + withdrawFee
-        return total
+    private fun calculateCost(yen: Double = 0.0, atmFee: Double= 10.0, withdrawFee: Double = 5.00) : Double {
+        val convertToUSD : Double = (yen + atmFee ) / yenToUSD
+        return  convertToUSD + withdrawFee
     }
 }
