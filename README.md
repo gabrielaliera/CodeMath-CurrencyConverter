@@ -33,14 +33,9 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='https://github.com/gabrielaliera/CodeMath-CurrencyConverter/blob/master/atm-walkthrough.gif' title='ATM APP' width='400' heigth="600" alt='ATM Calculator Walkthrough' />
 
-GIF created with **your chosen GIF tool**
-
-<!-- Recommended tools:
-- [Kap](https://getkap.co/) for macOS
-- [ScreenToGif](https://www.screentogif.com/) for Windows
-- [peek](https://github.com/phw/peek) for Linux. -->
+GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a> 
 
 ## Notes
 
